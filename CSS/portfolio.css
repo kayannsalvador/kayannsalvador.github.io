@@ -1,0 +1,248 @@
+* {
+    box-sizing: border-box;
+}
+
+/* Style the body */
+body {
+    margin-top: 1ch;
+    margin-right: 1ch;
+    margin-left: 1ch;
+}
+
+/* Style for social media account */
+.fa {
+    padding: 1px;
+    font-size: 30px;
+    width: 10%;
+    text-decoration: none;
+    color: #734046;
+}
+
+.a {
+    width: 10%;
+    text-decoration: none;
+    color: #734046;
+}
+
+/* Style for Navigation */
+#mySidenav a {
+    position: absolute;
+    left: -80px;
+    transition: 0.3s;
+    padding: 15px;
+    width: 100px;
+    text-decoration: none;
+    font-size: 20px;
+    color: white;
+    border-radius: 0 5px 5px 0;
+    font-size: large;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    overflow: hidden;
+}
+
+/* Hover of Navigation */
+#mySidenav a:hover {
+    left: 0;
+}
+
+/* About */
+#about {
+    top: 20px;
+    background-color: #85586F;
+}
+
+/* Contact */
+#contact {
+    top: 80px;
+    background-color: #C56183;
+}
+
+/* Portfolio */
+#portfolio {
+    top: 140px;
+    background-color: #F190B7;
+}
+
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+/* Style for the border */
+.border {
+    border: black 2px solid;
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: small;
+    float: center;
+    width: 40%;
+    padding: 5px;
+    border-color: #AC7D88;
+
+}
+
+/* Column container */
+.row {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+
+/* Sidebar/left column */
+.side {
+    -ms-flex: 30%;
+    flex: 30%;
+    background-color: #FFE6E6;
+    padding: 20px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+/* Main column */
+.main {
+    -ms-flex: 70%;
+    flex: 70%;
+    background-color: #F2D1D1;
+    padding: 20px;
+}
+
+/* Style for my image */
+.img-me {
+    width: 60%;
+    height: 30%;
+    margin-left: 15ch;
+    border-style: solid;
+    border-top-right-radius: 50%;
+    border-top-left-radius: 50%;
+    border-color: #AC7D88;
+
+}
+
+.arrow {
+    border: solid #AC7D88;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 1em;
+    float: center;
+    margin-left: 2ch;
+}
+
+.down {
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+}
+
+/* Responsive layout - when the screen is less than 700px wide */
+@media screen and (max-width: 700px) {
+    .row {
+        flex-direction: column;
+    }
+}
+
+/* Responsive layout - when the screen is less than 400px wide */
+@media screen and (max-width: 400px) {
+    .navbar a {
+        float: none;
+        width: 100%;
+    }
+}
+
+/* Style for gallery */
+.row-gallery {
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    padding: 0 4px;
+    text-align: center;
+}
+
+/* Style for column */
+.column {
+    -ms-flex: 25%;
+    flex: 25%;
+    max-width: 25%;
+    padding: 0 4px;
+}
+
+/* Style for column image */
+.column img {
+    margin-top: 8px;
+    vertical-align: middle;
+    width: 100%;
+}
+
+/* Responsive layout - makes a two column-layout */
+@media screen and (max-width: 800px) {
+    .column {
+        -ms-flex: 50%;
+        flex: 50%;
+        max-width: 50%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .column {
+        -ms-flex: 50%;
+        flex: 50%;
+        max-width: 50%;
+    }
+}
+
+/* Style for portfolio gallery */
+div.gallery {
+    border: 1px solid #ccc;
+}
+
+div.gallery:hover {
+    border: 1px solid #777;
+}
+
+div.gallery img {
+    width: 100%;
+    height: auto;
+}
+
+div.desc {
+    padding: 15px;
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.responsive {
+    padding: 0 6px;
+    float: left;
+    width: 25%;
+}
+
+@media only screen and (max-width: 700px) {
+    .responsive {
+        width: 50%;
+        margin: 6px 0;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .responsive {
+        width: 100%;
+    }
+}
+
+.clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Footer */
+.footer {
+    padding: 10px;
+    text-align: center;
+    background: #FFE6E6;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: small;
+}
