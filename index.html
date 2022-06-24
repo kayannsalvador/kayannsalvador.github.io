@@ -1,120 +1,108 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
     <title>Portfolio</title>
-    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="CSS/portfolio.css">
 
 </head>
 
 <body>
+    <!-- Header -->
+    <div class="header">
+        <div class="container">
+            <div class="header-bar">
+                <ul class="slider-menu">
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- End of Header -->
 
     <div class="row">
-        <div class="side">
-            <img src="PHOTO/Kay.png" alt="Me" class="img-me">
-            <div id="mySidenav" class="sidenav">
-                <a href="#" id="about">About</a>
-                <a href="#" id="contact">Contact</a>
-                <a href="#main" id="portfolio">Portfolio</a>
+        <div class="leftcolumn" id="about">
+            <img src="PHOTO/Kaye.jpg" alt="Me" class="img-me">
+            <details>
+                <summary><b>ABOUT ME</b></summary>
+                <p>Hi, Im Kay Ann Salvador.
+                    I am Front End Developer.
+                    I Love Design. I Love to Develop.</p>
+            </details>
+            <div class="card" id="portfolio">
+                <hr>
+                <h2>PORTFOLIO</h2>
+                <hr>
+                <br>
+                <div class="responsive">
+                    <div class="gallery">
+                        <a href="calculator.html">
+                            <img src="PHOTO/Calculator.jpg" alt="Calculator" width="600" height="400">
+                        </a>
+                        <div class="desc">Calculator</div>
+                    </div>
+                </div>
+                <div class="responsive">
+                    <div class="gallery">
+                        <a href="portfolio-1.html">
+                            <img src="PHOTO/Capture studio.jpg" alt="Capture" width="600" height="400">
+                        </a>
+                        <div class="desc">Photography</div>
+                    </div>
+                </div>
+                <div class="responsive">
+                    <div class="gallery">
+                        <a href="wedding-invitation.html">
+                            <img src="PHOTO/Wedding.jpg" alt="Wedding" width="600" height="400">
+                        </a>
+                        <div class="desc">Wedding Invitation</div>
+                    </div>
+                </div>
             </div>
-            <hr>
-            <caption id="about">Read More...</caption><br>
-            <label onclick="typeWriter()">
-                <i class="arrow down"></i>
-            </label>
-            <p id="demo"></p>
-
-
-            <hr>
-
-            <br>
-            <h3><b>FOLLOW ME ON</b></h3>
-            <a href="https://www.facebook.com/kaye.salvador.733" class="fa fa-facebook"></a>
-            <a href="https://instagram.com/_kyaneing" class="fa fa-instagram"></a>
-            <a href="https://snapchat.com/kaysalvador25" class="fa fa-snapchat"></a>
-            <h3><b>CALL ME</b></h3>
-            <p><b>09287688063</b></p>
-            <h3><b>MESSAGE ME</b></h3>
-            <a href="mailto.salvadorkayann38@gmail.com" class="a"><b>salvadorkayann38@gmail.com</b></a>
         </div>
-        <div class="main">
-            <div class="border">
-                <h2><b>GALLERY</b></h2>
-            </div>
-            <br>
-            <div class="row-gallery">
-                <div class="column">
-                    <img src="PHOTO/Book.jpeg" alt="Book">
-                </div>
-                <div class="column">
-                    <img src="PHOTO/Wine.jpeg" alt="Wine">
+        <div class="rightcolumn">
+            <div class="card" id="contact">
+                <h2>Contact</h2>
+                <hr>
+                <i class="fa fa-fw fa-home"></i> San Fernando, Pampanga<br><br>
+                <i class="fa fa-fw fa-phone"></i> 09287688063<br><br>
+                <i class="fa fa-fw fa-envelope"></i> salvadorkayann38@gmail.com
 
-                </div>
-                <div class="column">
-                    <img src="PHOTO/Light.jpeg" alt="Light">
-                </div>
-                <div class="column">
-                    <img src="PHOTO/Violet.jpeg" alt="Violet">
-                </div>
-            </div>
-            <br>
-            <hr>
-            <br>
-            <div class="border">
-                <h2><b>PORTFOLIO</b></h2>
-            </div>
-            <br>
 
-            <div class="responsive">
-                <div class="gallery">
-                    <a href="calculator.html">
-                        <img src="PHOTO/Untitled design.jpg" alt="Calculator" width="600" height="400">
-                    </a>
-                    <div class="desc">Calculator</div>
+
+            </div>
+            <div class="card">
+                <h3>Interest</h3>
+                <hr>
+                <div class="image">
+                    <img src="PHOTO/cafe.png" alt="Paris" style="width:50px">
+                    <img src="PHOTO/Sand.png" alt="Paris" style="width:50px">
+                    <img src="PHOTO/Headset.png" alt="Paris" style="width:50px">
+                    <img src="PHOTO/reading.png" alt="Paris" style="width:50px">
                 </div>
             </div>
+            <div class="card">
+                <h3>Follow me on</h3>
+                <hr>
 
-            <div class="responsive">
-                <div class="gallery">
-                    <a href="portfolio-1.html">
-                        <img src="PHOTO/Photography.jpg" alt="Photography" width="600" height="400">
-                    </a>
-                    <div class="desc">Photography</div>
-                </div>
+                <a href="https://www.facebook.com/kaye.salvador.733" class="fa fa-facebook"></a>
+                <a href="https://instagram.com/_kyaneing" class="fa fa-instagram"></a>
+                <a href="https://twitter.com/_kyaneing" class="fa fa-twitter"></a>
+                <a href="https://snapchat.com/kaysalvador25" class="fa fa-snapchat"></a>
+                <a href="https://www.linkedin.com/in/kay-ann-salvador-088834240" class="fa fa-linkedin"></a>
             </div>
-
-            <div class="responsive">
-                <div class="gallery">
-                    <a href="wedding invitation.html">
-                        <img src="PHOTO/Invitation.jpg" alt="Invitation" width="600" height="400">
-                    </a>
-                    <div class="desc">Wedding Invitation</div>
-                </div>
-            </div>
-
         </div>
     </div>
 
     <div class="footer">
-        <h5>CREATED BY: KAY ANN GURO SALVADOR</h5>
+        <p>Created By: Kay Ann Salvador | All Rights Reserved</p>
     </div>
 
-    <script>
-        var i = 0;
-        var txt = 'Hi, Im Kay Ann Salvador. I am Front End Developer. I am creative. I love to design. I love to develop.';
-        var speed = 50;
-
-        function typeWriter() {
-            if (i < txt.length) {
-                document.getElementById("demo").innerHTML += txt.charAt(i);
-                i++;
-                setTimeout(typeWriter, speed);
-            }
-        }
-    </script>
 </body>
 
 </html>

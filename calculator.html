@@ -1,115 +1,192 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
     <meta charset="utf-8">
-    <title> Calculator </title>
-
-    <style>
-        html {
-            height: 100vh;
-            display: flex;
-            align-items: left;
-            justify-content: left;
-            background-image: url("PHOTO/tech.jpg");
-        }
-
-        input[type=button] {
-            width: 20%;
-            height: 60px;
-            float: left;
-            margin: 4px;
-            box-sizing: border-box;
-            background: linear-gradient(to bottom, #33ccff 0%, #66ffcc 63%);
-            border: none;
-            font-size: 30px;
-            line-height: 30px;
-            font-weight: 700;
-            cursor: pointer;
-            border-radius: 50%;
-        }
-
-        input[type=text] {
-            width: 250px;
-            height: 60px;
-            float: right;
-            padding: 0;
-            box-sizing: border-box;
-            background: none;
-            border: none;
-            color: white;
-            text-align: right;
-            font-weight: 300;
-            font-size: 40px;
-            line-height: 70px;
-            margin: 0 25px;
-            border-color: beige;
-        }
-
-        .btnTop {
-            color: black;
-            background-color: #125B50;
-            font-size: 14px;
-            margin: auto;
-            width: 50px;
-            height: 25px;
-        }
-    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Calculator</title>
 </head>
+<style>
+    html,
+    body {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        font-family: 'Courier New', Courier, monospace;
+        background-image: url("PHOTO/bg.jpg");
+    }
+
+    * {
+        box-sizing: border-box;
+        font: bold 14px Arial, sans-serif;
+    }
+
+    h1 {
+        font-size: 40px;
+        text-align: center;
+        margin-bottom: 110px;
+        background: #18978F;
+        color: black;
+        margin-top: 0;
+        padding: 20px;
+        font-family: 'Courier New', Courier, monospace;
+
+    }
+
+    .main-div {
+        width: 290px;
+        margin: 0 auto;
+        background: #18978F;
+        height: 55%;
+        box-shadow: 3px 3px 3px black;
+        padding: 15px;
+        border-bottom: 5px solid #125B50;
+        border-radius: 4px;
+        position: relative;
+    }
+
+    .screen-div,
+    .number-div {
+        padding: 0;
+        margin: 0;
+    }
+
+    .screen {
+        list-style: none;
+        color: white;
+        height: 45px;
+        width: 58px;
+        margin-left: 8px;
+        border-radius: 4px;
+        border-top: 4px solid #828A9B;
+        text-align: center;
+        font-weight: bold;
+        font-family: 'Ubuntu', sans-serif;
+        margin-bottom: 8px;
+        width: 182px;
+        background: #94B49F;
+        border-top: 4px solid #125B50;
+        overflow: hidden;
+    }
+
+    .clear {
+        width: 60px;
+        background: #94B49F;
+        padding: 10px 17px;
+        position: absolute;
+        border-radius: 3px;
+        left: 215px;
+        top: 18px;
+        color: black;
+        cursor: pointer;
+        text-align: center;
+    }
+
+
+    .number-div li {
+        list-style: none;
+        float: left;
+        width: 52px;
+        background: white;
+        margin: 9px 5px;
+        padding: 10px;
+        border-bottom: 4px solid #125B50;
+        border-radius: 5px;
+        color: black;
+        text-align: center;
+        transition: .2s;
+        cursor: pointer;
+    }
+
+    .number-div li:hover {
+        background: #44B3C2;
+        border-bottom: 4px solid #336699;
+        color: white;
+    }
+
+    #equals {
+        background: #D3E4CD;
+        color: black;
+    }
+
+    #equals:hover {
+        background: #A0D995;
+        border-bottom: 4px solid #1A4D2E;
+        color: black;
+    }
+</style>
 
 <body>
-    </div>
-    <form name="Calculator" class="calculator">
-        <table border="2" align="center" cellpadding="15" cellspacing="12">
-            <tr>
-                <td>
-                    <input type="text" name="Input" Size="35" id="display">
-                    <br>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <input type="button" name="one" style="font-size:20px" value=" 1 "
-                        OnClick="Calculator.Input.value += '1'">
-                    <input type="button" name="two" style="font-size:30px" value=" 2 "
-                        OnCLick="Calculator.Input.value += '2'">
-                    <input type="button" name="three" style="font-size:30px" value=" 3 "
-                        OnClick="Calculator.Input.value += '3'">
-                    <input type="button" name="add" class="btnTop" style="font-size:30px" value=" + "
-                        OnClick="Calculator.Input.value += ' + '">
-                    <br>
-                    <input type="button" name="four" style="font-size:30px" value=" 4 "
-                        OnClick="Calculator.Input.value += '4'">
-                    <input type="button" name="five" style="font-size:30px" value=" 5 "
-                        OnCLick="Calculator.Input.value += '5'">
-                    <input type="button" name="six" style="font-size:30px" value=" 6 "
-                        OnClick="Calculator.Input.value += '6'">
-                    <input type="button" name="minus" style="font-size:30px" value=" - "
-                        OnClick="Calculator.Input.value += ' - '">
-                    <br>
-                    <input type="button" name="seven" style="font-size:30px" value=" 7 "
-                        OnClick="Calculator.Input.value += '7'">
-                    <input type="button" name="eight" style="font-size:30px" value=" 8 "
-                        OnCLick="Calculator.Input.value += '8'">
-                    <input type="button" name="nine" style="font-size:30px" value=" 9 "
-                        OnClick="Calculator.Input.value += '9'">
-                    <input type="button" name="mul" style="font-size:30px" value=" * "
-                        OnClick="Calculator.Input.value += ' * '">
-                    <br>
-                    <input type="button" name="clear" style="font-size:30px" value=" c "
-                        OnClick="Calculator.Input.value = ''">
-                    <input type="button" name="zero" style="font-size:30px" value=" 0 "
-                        OnClick="Calculator.Input.value += '0'">
-                    <input type="button" name="DoIt" style="font-size:30px" value=" = "
-                        OnClick="Calculator.Input.value = eval(Calculator.Input.value)">
-                    <input type="button" name="div" style="font-size:30px" value=" / "
-                        OnClick="Calculator.Input.value += ' / '">
-                    <br>
-                </td>
+    <h1>
+        <hr>Calculator
+        <hr>
+    </h1>
 
-            </tr>
-        </table>
-    </form>
+    <div class="main-div">
+        <div class="screen" id="screen">
+            <p></p>
+        </div>
+        <div class="clear" id="clear">C</div>
+        <ul class="number-div">
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>+</li>
+            <li>4</li>
+            <li>5</li>
+            <li>6</li>
+            <li>x</li>
+            <li>7</li>
+            <li>8</li>
+            <li>9</li>
+            <li>-</li>
+            <li>0</li>
+            <li>.</li>
+            <li id="equals">=</li>
+            <li>÷</li>
+        </ul>
+
+    </div>
+
+    <script>
+        window.onload = function () {
+            var elements = document.getElementsByTagName("li");
+            var screen = document.querySelectorAll(' p')[0];
+            var clear = document.getElementsByClassName('clear')[0];
+
+            for (var i = 0; i < elements.length; i += 1) {
+                if (elements[i].innerHTML === '=') {
+                    elements[i].addEventListener("click", calculate(i));
+                } else {
+                    elements[i].addEventListener("click", addtocurrentvalue(i));
+                }
+            }
+
+            function addtocurrentvalue(i) {
+                return function () {
+                    if (elements[i].innerHTML === "÷") {
+                        screen.innerHTML += "/ ";
+                    } else if (elements[i].innerHTML === "x") {
+                        screen.innerHTML += "*";
+                    } else {
+                        screen.innerHTML += elements[i].innerHTML;
+                    }
+                };
+            }
+
+            clear.onclick = function () {
+                screen.innerHTML = '';
+            };
+
+            function calculate(i) {
+                return function () {
+                    screen.innerHTML = eval(screen.innerHTML);
+                };
+            }
+        };
+
+    </script>
 </body>
 
 </html>

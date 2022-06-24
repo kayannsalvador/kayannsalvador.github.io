@@ -1,201 +1,164 @@
+@import url('https://fonts.googleapis.com/css?family=Parisienne|Quicksand&display=swap');
+
 * {
     box-sizing: border-box;
 }
 
-/* Style the body */
 body {
-    margin-top: 1ch;
-    margin-right: 1ch;
-    margin-left: 1ch;
+    font-family: Arial;
+    padding: 10px;
 }
 
-/* Style for social media account */
-.fa {
-    padding: 1px;
-    font-size: 30px;
-    width: 10%;
-    text-decoration: none;
-    color: #734046;
-}
-
-.a {
-    width: 10%;
-    text-decoration: none;
-    color: #734046;
-}
-
-/* Style for Navigation */
-#mySidenav a {
-    position: absolute;
-    left: -80px;
-    transition: 0.3s;
-    padding: 15px;
-    width: 100px;
-    text-decoration: none;
-    font-size: 20px;
-    color: white;
-    border-radius: 0 5px 5px 0;
-    font-size: large;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    overflow: hidden;
-}
-
-/* Hover of Navigation */
-#mySidenav a:hover {
-    left: 0;
-}
-
-/* About */
-#about {
-    top: 20px;
-    background-color: #85586F;
-}
-
-/* Contact */
-#contact {
-    top: 80px;
-    background-color: #C56183;
-}
-
-/* Portfolio */
-#portfolio {
-    top: 140px;
-    background-color: #F190B7;
-}
-
-.sticky {
-    position: fixed;
-    top: 0;
-    width: 100%;
-}
-
-/* Style for the border */
-.border {
-    border: black 2px solid;
+/* Header */
+.header {
+    padding: 50px;
     text-align: center;
-    font-family: 'Courier New', Courier, monospace;
-    font-size: small;
-    float: center;
-    width: 40%;
-    padding: 5px;
-    border-color: #AC7D88;
-
+    background-image: linear-gradient(to bottom right, rgb(235, 76, 171), rgb(227, 77, 171), rgb(218, 78, 170), rgb(210, 80, 170), rgb(202, 81, 170), rgb(193, 82, 170), rgb(185, 83, 169), rgb(176, 84, 169), rgb(168, 85, 169), rgb(160, 87, 169), rgb(151, 88, 168), rgb(143, 89, 168));
 }
 
-/* Column container */
-.row {
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
+/* Left column */
+.leftcolumn {
+    float: left;
+    width: 75%;
+    background-color: #F2D1D1;
+    text-align: center;
+    font-family: 'Quicksand', sans-serif;
 }
 
-/* Sidebar/left column */
-.side {
-    -ms-flex: 30%;
-    flex: 30%;
-    background-color: #FFE6E6;
-    padding: 20px;
-    font-family: 'Courier New', Courier, monospace;
+/* Right column */
+.rightcolumn {
+    float: left;
+    width: 25%;
+    background-color: #f1f1f1;
+    padding-left: 20px;
 }
 
-/* Main column */
-.main {
-    -ms-flex: 70%;
-    flex: 70%;
+/* Card Style */
+.card {
     background-color: #F2D1D1;
     padding: 20px;
+    margin-top: 20px;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 95%;
 }
 
-/* Style for my image */
-.img-me {
-    width: 60%;
-    height: 30%;
-    margin-left: 15ch;
-    border-style: solid;
-    border-top-right-radius: 50%;
-    border-top-left-radius: 50%;
-    border-color: #AC7D88;
-
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
 }
 
-.arrow {
-    border: solid #AC7D88;
-    border-width: 0 3px 3px 0;
-    display: inline-block;
-    padding: 1em;
-    float: center;
-    margin-left: 2ch;
-}
-
-.down {
-    transform: rotate(45deg);
-    -webkit-transform: rotate(45deg);
-}
-
-/* Responsive layout - when the screen is less than 700px wide */
-@media screen and (max-width: 700px) {
-    .row {
-        flex-direction: column;
-    }
-}
-
-/* Responsive layout - when the screen is less than 400px wide */
-@media screen and (max-width: 400px) {
-    .navbar a {
-        float: none;
-        width: 100%;
-    }
-}
-
-/* Style for gallery */
-.row-gallery {
-    display: flex;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
-    padding: 0 4px;
-    text-align: center;
-}
-
-/* Style for column */
-.column {
-    -ms-flex: 25%;
-    flex: 25%;
-    max-width: 25%;
-    padding: 0 4px;
-}
-
-/* Style for column image */
-.column img {
-    margin-top: 8px;
-    vertical-align: middle;
-    width: 100%;
-}
-
-/* Responsive layout - makes a two column-layout */
+/* Responsive layout */
 @media screen and (max-width: 800px) {
-    .column {
-        -ms-flex: 50%;
-        flex: 50%;
-        max-width: 50%;
+
+    .leftcolumn,
+    .rightcolumn {
+        width: 100%;
+        padding: 0;
     }
 }
 
-@media screen and (max-width: 600px) {
-    .column {
-        -ms-flex: 50%;
-        flex: 50%;
-        max-width: 50%;
+/* Navigation Style */
+.container {
+    height: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.lead {
+    font-family: 'Quicksand';
+}
+
+.header-bar {
+    position: relative;
+    width: 50%;
+    min-width: 300px;
+    height: 50px;
+    border: 10px solid transparent;
+    border-top: 10px solid #FFE6E6;
+    border-left: 10px solid #FFE6E6;
+    box-shadow: 4px 4px 5px rgba(0, 0, 0, 0.25) inset;
+}
+
+.header-bar::after {
+    content: '';
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    width: 30%;
+    height: 49px;
+    border: 10px solid transparent;
+    border-bottom: 10px solid #FFE6E6;
+    border-right: 10px solid #FFE6E6;
+    transition: 0.3s linear all;
+}
+
+.slider-menu {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    z-index: 1;
+}
+
+.slider-menu>li a {
+    display: inline-flex;
+    padding: 14px;
+    margin-left: 2px;
+    font-family: 'Quicksand', sans-serif;
+    color: #fff;
+    cursor: pointer;
+    transition: 0.3s linear all;
+    user-select: none;
+    text-decoration: none;
+}
+
+.slider-menu>li a:hover {
+    color: #faa;
+    box-shadow: 0 50px 5px rgba(0, 0, 0, 0.15) inset;
+}
+
+/* End of Navigation Style */
+
+/* Style for About Form */
+.img-me {
+    width: 15%;
+    border-style: solid;
+    border-radius: 50%;
+    border-color: #AC7D88;
+    margin: 2ch 2ch;
+    padding: 5px 5px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media screen and (max-width: 580px) {
+    .img-me {
+        -ms-flex: 70%;
+        flex: 70%;
+        width: 30%;
+        height: fixed;
+        padding: 5px 5px;
+        margin: 2ch 2ch;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
     }
 }
 
-/* Style for portfolio gallery */
-div.gallery {
-    border: 1px solid #ccc;
-}
+/* End of About Column */
+
+/* Portfolio Column */
 
 div.gallery:hover {
-    border: 1px solid #777;
+    border: 2px solid black;
 }
 
 div.gallery img {
@@ -206,7 +169,7 @@ div.gallery img {
 div.desc {
     padding: 15px;
     text-align: center;
-    font-family: 'Courier New', Courier, monospace;
+
 }
 
 * {
@@ -216,7 +179,8 @@ div.desc {
 .responsive {
     padding: 0 6px;
     float: left;
-    width: 25%;
+    width: 30%;
+    margin-bottom: 2ch;
 }
 
 @media only screen and (max-width: 700px) {
@@ -238,11 +202,44 @@ div.desc {
     clear: both;
 }
 
+/* End of Portfolio Column */
+
+/* Contact Column */
+
+image {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 5px;
+    width: 150px;
+}
+
+/* End of Contact Column */
+
+/* Style for social media account */
+.fa {
+    padding: 1px;
+    font-size: 20px;
+    width: 10%;
+    text-decoration: none;
+    color: #734046;
+}
+
+.a {
+    width: 10%;
+    text-decoration: none;
+    color: #734046
+}
+
+.fa:hover {
+    color: black;
+}
+
+
 /* Footer */
 .footer {
-    padding: 10px;
+    padding: 20px;
     text-align: center;
-    background: #FFE6E6;
-    font-family: 'Courier New', Courier, monospace;
-    font-size: small;
+    background-image: linear-gradient(to bottom right, rgb(235, 76, 171), rgb(227, 77, 171), rgb(218, 78, 170), rgb(210, 80, 170), rgb(202, 81, 170), rgb(193, 82, 170), rgb(185, 83, 169), rgb(176, 84, 169), rgb(168, 85, 169), rgb(160, 87, 169), rgb(151, 88, 168), rgb(143, 89, 168));
+    color: #f1f1f1;
+    font-family: 'Quicksand', sans-serif;
 }
